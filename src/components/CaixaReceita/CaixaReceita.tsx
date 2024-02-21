@@ -24,13 +24,13 @@ function CaixaReceita(props: CaixaReceitaProps) {
     return (
         <li className="restaurant-box">
       <Link to={`${id}/cardapio`}>
+        <img src={image}/>
         <h2>📍 {title}</h2>
         <div className="details">
           <span className="small-details">{category}</span>
-          <span className="small-details">
-            {/* <Avaliacoes avaliacao={avaliacao} /> */}
-          </span>
-          <span className="small-details">🚚 {prepTime} mins</span>
+        </div>
+        <div className="details">
+          <span className="small-details">🕝 {prepTime} mins</span>
         </div>
         <p>{servings}</p>
       </Link>
