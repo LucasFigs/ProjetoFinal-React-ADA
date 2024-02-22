@@ -222,6 +222,11 @@
     opacity: 0.6;
     line-height: 1.2;
     font-weight: 200;
+    &:not(:last-child)::after {
+      content: " • ";
+      font-size: 1.3rem;
+      color: var(--black);
+    }
   }
   
   h1,
@@ -277,4 +282,67 @@
   form {
     margin-top: 3rem;
     max-width: 400px;
+  }
+
+  // .card-receita {
+  //   text-align: right;
+  // }
+
+  .details {
+    display: flex;
+    // justify-content: space-between;
+    gap: 10px;
+    align-items: baseline;
+  }
+
+
+  .grid-receitas {
+    --max: 350px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--max), 1fr));
+    grid-gap: 1rem;
+    margin: 3rem 0 0 0;
+    & > * {
+      padding: 1rem;
+      // border: 1px solid currentColor;
+      border-radius: 5px;
+      background-color: transparent;
+      //border: 2px solid rgba(0, 0, 0, 0.05);
+      will-change: background, scale, box-shadow, color;
+    }
+  }
+
+  .box-receitas {
+    padding-bottom: 3rem;
+    margin: 0;
+  }
+
+  .destaque {
+    color: var(--red-ifood);
+  }
+
+  .destaque-verde {
+    color: #42ab49;
+  }
+
+  .descricao-receita {
+    margin-bottom: 20px;
+  }
+
+  .button-video {
+      display: block;
+      background-color: var(--red-ifood);
+      color: var(--gray);
+      border: 0;
+      border-radius: 1000px;
+      //width: 40px;
+      //height: 40px;
+      padding: 8px;
+      text-align: center;
+      &:hover,
+      &:focus {
+        background-color: var(--red-ifood);
+        color: white;
+        outline: 0;
+      }
   }
