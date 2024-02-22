@@ -23,16 +23,25 @@ function CaixaReceita(props: CaixaReceitaProps) {
 
     return (
         <li className="restaurant-box">
-      <Link to={`${id}/cardapio`}>
-        <img src={image}/>
+      <Link to={`${id}/receita`}>
+        <img src={image} />
         <h2>📍 {title}</h2>
         <div className="details">
           <span className="small-details">{category}</span>
+          {vegetarian ? (
+          <span className="small-details">veg</span>
+        ) : (
+          null
+        ) }
+        {glutenFree ? (
+          <span className="small-details">glutenFree</span>
+        ) : (null)}
         </div>
         <div className="details">
           <span className="small-details">🕝 {prepTime} mins</span>
         </div>
         <p>{servings}</p>
+
       </Link>
     </li>
     );
