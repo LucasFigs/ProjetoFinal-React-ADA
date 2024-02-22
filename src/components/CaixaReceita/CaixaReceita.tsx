@@ -6,6 +6,7 @@ export interface Receita {
     title: string;
     category: string;
     image: string;
+    ingredients: string[];
     prepTime: string;
     servings: string;
     vegetarian: boolean;
@@ -18,7 +19,7 @@ interface CaixaReceitaProps {
 
 function CaixaReceita(props: CaixaReceitaProps) {
     const {
-        receita: { id, title, category, image, prepTime, servings, vegetarian, glutenFree },
+        receita: { id, title, category, image, ingredients, prepTime, servings, vegetarian, glutenFree },
     } = props;
 
     return (

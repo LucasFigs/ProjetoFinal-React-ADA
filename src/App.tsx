@@ -2,6 +2,7 @@
 import { Link, Route, Routes } from 'react-router-dom';
 import PaginaReceitas from './pages/PaginaReceitas';
 import PaginaDetalhesReceita from './pages/PaginaDetalheReceita';
+import PaginaBusca from './pages/PaginaBusca';
 
 
 
@@ -15,7 +16,7 @@ function App() {
           <div className="row">
             <Link to={"/"}>🏠</Link>
             <div className="shopping-cart">
-              <Link to={"/"}>🔎</Link>
+              <Link to={"/pesquisar"}>🔎</Link>
             </div>
           </div>
         </div>
@@ -23,7 +24,9 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<PaginaReceitas />} />
-          <Route path="/:id/receita" element={<PaginaDetalhesReceita />} />
+          <Route path=":id/receita" element={<PaginaDetalhesReceita />} />
+          <Route path="pesquisar/:id/receita" element={<PaginaDetalhesReceita />} />
+          <Route path="/pesquisar" element={<PaginaBusca/>} />
         </Routes>
       </div>
     </>
