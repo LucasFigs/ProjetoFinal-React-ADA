@@ -15,6 +15,7 @@ function App() {
         <div className="container">
           <div className="row">
             <Link to={"/"}>🏠</Link>
+            <h1 className='tituloSite'>Receitas do Loro José</h1>
             <div className="shopping-cart">
               <Link to={"/pesquisar"}>🔎</Link>
             </div>
